@@ -1,0 +1,38 @@
+---
+title: "R Package"
+author: "Emily Hunt"
+date: "4/27/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(MATH4753ehunt0108)
+```
+
+
+My N Curve function
+```{r}
+myncurve(mu=10, sigma = 4, a = 6)
+```
+
+
+My Boot function
+```{r}
+set.seed(35); sam<-round(rnorm(30,mean=20,sd=3),3)
+myboot2(iter=1000,x=sam, fun="mean",alpha=0.05,xlab="mean",cx=1.5)
+```
+
+My CLT function
+```{r}
+myclt(n=10,iter=10000,a=5,b=10)
+```
+
+My MLNorm function
+```{r}
+mymlnorm(x=c(10,12,13,15,12,11,10),mu=seq(10,15,length=1000), sig=seq(0.1,4,length=1000),lwd=2,labcex=1)
+```
+
